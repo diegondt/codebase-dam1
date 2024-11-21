@@ -1,0 +1,46 @@
+{
+    "fantasia": [
+        {
+            "autor": "Terry Pratchett",
+            "titulo": "Mort"
+        },
+        {
+            "autor": "Terry Pratchett",
+            "titulo": "El color de la magia"
+        },
+        {
+            "autor": "Terry Pratchett",
+            "titulo": "El segador"
+        },
+        {
+            "autor": "Tolkien",
+            "titulo": "El señor de los anillos"
+        },
+        {
+            "autor": "Tolkien",
+            "titulo": "El hobbit"
+        }
+    ],
+    "ciencia_ficcion": [
+        {
+            "autor": "Isaac Asimov",
+            "titulo": "Fundación"
+        },
+        {
+            "autor": "Cixin Liu",
+            "titulo": "El problema de los tres cuerpos"
+        },
+        {
+            "autor": "Cixin Liu",
+            "titulo": "El bosque oscuro"
+        },
+        {
+            "autor": "Cixin Liu",
+            "titulo": "El fin de la muerte"
+        },
+        {
+            "autor": "Cixin Liu",
+            "titulo": "La era de la supernova"
+        }
+    ]
+}
