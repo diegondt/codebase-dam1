@@ -9,3 +9,19 @@ Podemos instalar MySQL en diferentes sistemas operativos, como Windows, macOS y 
 ```bash
 docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 ```
+
+## Conexión
+
+Podemos conectarnos a MySQL a través de la línea de comandos o a través de una interfaz gráfica como MySQL Workbench.
+
+```bash
+mysql -u root -p
+```
+
+Si es en docker:
+
+```bash
+docker exec -it some-mysql mysql -u root -p
+```
+
+

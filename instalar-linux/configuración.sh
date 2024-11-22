@@ -1,6 +1,5 @@
 #!/bin/bash
 # Este script configura tu sistema ubuntu para poder tener tu entorno de trabajo rápidamente
-
 if [ "$EUID" -ne 0 ]; then
   echo "Por favor, ejecuta este script como root o con sudo."
   exit 1
