@@ -6,14 +6,8 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-# Configuracion de idioma a español
-locale-gen es_ES.UTF-8
-update-locale LANG=es_ES.UTF-8
-setxkbmap -layout es
-
 # Variables de usuario y contraseña
 user="" 
-pass=""
 email=""
 
 # Agregar al grupo sudo (permite usar sudo)
