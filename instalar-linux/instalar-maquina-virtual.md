@@ -2,7 +2,7 @@
 
 ## Instalar VirtualBox
 
-[Descarga]() e instala VirtualBox.
+[Descarga](https://www.virtualbox.org/) e instala VirtualBox.
 
 ## Instalación de Ubuntu
 
@@ -59,7 +59,7 @@ sudo apt upgrade
 
 Una vez actualizado, puedes instalar los paquetes y software que necesites usar.
 
-Os he incluido el archivo `configuracion.sh` con el que podeis instalar *casi* todo lo que necesitaremos en el curso:
+Os he incluido el archivo [config.sh](https://github.com/diegondt/codebase-dam1/blob/main/instalar-linux/config.sh) con el que podeis instalar *casi* todo lo que necesitaremos en el curso:
 
 - **vscode**: editor de código, lo usaremos para crear código.
 - **git**: para crear, editar y gestionar repositorios locales.
