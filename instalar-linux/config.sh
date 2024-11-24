@@ -1,5 +1,12 @@
 #!/bin/bash
 # Este script configura tu sistema ubuntu para poder tener tu entorno de trabajo rápidamente
+# Necesitarás ejecutarlo como sudo, para ello:
+# Si aun no tienes permisos:
+# su -
+# sudo usermod -aG sudo tu_usuario
+# exit
+# reinicia el sistema y ejecuta el script con sudo
+
 if [ "$EUID" -ne 0 ]; then
   echo "Por favor, ejecuta este script como root o con sudo."
   exit 1
@@ -82,6 +89,7 @@ sudo apt update
 sudo snap install code --classic # or code-insiders
 
 # Configuracion de vscode
+
 code --install-extension ritwickdey.liveserver
 code --install-extension bierner.markdown-mermaid
 code --install-extension gera2ld.markmap-vscode
