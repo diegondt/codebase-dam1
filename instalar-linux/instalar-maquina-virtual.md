@@ -40,6 +40,19 @@ Para poder usar la terminal y escribir correctamente con el teclado en Español 
 
 ![](8.png)
 
+## Obtener permisos de superusuario
+
+Para poder instalar software y realizar cambios en el sistema, necesitarás permisos de superusuario, estos se obtienen con el comando `sudo` seguido del comando que quieras ejecutar.
+
+Para añadir tu usuario a la lista de superusuarios, abre la terminal y lanza:
+
+```bash
+su -
+usermod -aG sudo <tu-usuario>
+```
+
+Reemplaza `<tu-usuario>` por tu nombre de usuario.
+
 ## Exponer tu máquina al host
 
 Ahora mismo tu máquina virtual está en modo `NAT`, corriendo en una red virtual aislada de tu sistema operativo principal, si quieres poder comunicarte con ella, por ejemplo, al lanzar un servidor http con `python -m http.server`, deberás configurarla en modo `Adaptador Puente`.

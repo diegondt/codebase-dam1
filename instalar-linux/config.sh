@@ -9,9 +9,6 @@ fi
 user="" 
 email=""
 
-# Agregar al grupo sudo (permite usar sudo)
-usermod -aG sudo $user
-
 # Instalar paquetes necesarios
 
 apt update
@@ -34,7 +31,7 @@ git config --global user.email $email
 # Instalar Docker
 # Extraido de https://docs.docker.com/engine/install/ubuntu/
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get install ca-certificates curl -y
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -45,14 +42,14 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 # Instalar nvm y nodejs
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 nvm install 22
 
 # Instalar mongodb
-sudo apt-get install gnupg
+sudo apt-get install gnupg -y
 curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
    sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
    --dearmor
@@ -61,12 +58,12 @@ sudo apt update
 sudo apt-get install -y mongodb-org
 
 # Instalar redis
-sudo apt-get install lsb-release curl gpg
+sudo apt-get install lsb-release curl gpg -y
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
 sudo apt-get update
-sudo apt-get install redis
+sudo apt-get install redis -y
 
 # QoL
 apt install -y xclip htop tree tmux
@@ -75,14 +72,14 @@ echo "alias ll='ls -la'" >> ~/.bashrc
 echo "alias toclip='xclip -selection clipboard'" >> ~/.bashrc
 
 # Instalar vscode
-sudo apt-get install wget gpg
+sudo apt-get install wget gpg -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
 echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
 rm -f packages.microsoft.gpg
-sudo apt install apt-transport-https
+sudo apt install apt-transport-https -y
 sudo apt update
-sudo apt install code # or code-insiders
+sudo snap install code --classic # or code-insiders
 
 # Configuracion de vscode
 code --install-extension ritwickdey.liveserver
