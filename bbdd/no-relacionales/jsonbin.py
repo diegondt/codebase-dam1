@@ -44,6 +44,7 @@ def patch_json(data):
     }
     response = requests.patch(url, headers=headers, json=data)
     return response.json()
-
-patch_json({"username": "admin", "password": "1234"})
+print(get_json())
+update_json({"username": "admin", "password": "admin"})
+patch_json({"username": "user0", "password": "user0"})
 print(get_json())
