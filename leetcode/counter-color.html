@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
+    <style>
+        #contadorPuntos{
+            background: blue;
+        }
+    </style>
 </head>
 <body>
+    <p>Clicker</p>
     <p id="contadorPuntos">100</p>
     <button>Click</button>
 
     <script>
         const button = document.querySelector('button');
         const contadorPuntos = document.querySelector('#contadorPuntos');
-        let puntos = localStorage.getItem('puntos');
-        if(puntos === null){
-         puntos = 0;
-        }
-
+        let puntos = 0;
         contadorPuntos.textContent = puntos;
 
-        function sumarPuntos(){
+        button.addEventListener('click', () => {
             puntos++;
-            localStorage.setItem('puntos', puntos);
-            contadorPuntos.innerText = puntos;
-        }
-        button.addEventListener('click', sumarPuntos);
+            contadorPuntos.textContent = puntos;
+        });
     </script>
 </body>
 </html>
