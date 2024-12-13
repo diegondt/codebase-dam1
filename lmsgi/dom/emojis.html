@@ -76,7 +76,7 @@
             '✊', '🤛', '🤜', '🤞', '🤘', 
             '👌', '👈', '👉', '👆', '👇'
         ]
-
+        
         function random(min, max){
             return Math.floor(Math.random() * (max - min)) + min;
         }
@@ -92,9 +92,10 @@
         // Seccion 2
         const emoji2 = document.querySelector('#emoji2');
         emoji2.textContent = '🤓';
-        setInterval(() => {
+        setInterval(cambiarEmoji, 1000);
+        function cambiarEmoji(){
             emoji2.textContent = emojis[random(0, emojis.length)];
-        }, 100);
+        }
 
         // Seccion 3
         const emoji3 = document.querySelector('#emoji3');

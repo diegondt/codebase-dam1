@@ -37,3 +37,45 @@
 - Mermaid
 - JSONCrack
 
+## HTML
+
+- Que es HTML
+- Que problema resuelve
+- Sintaxis básica
+  - Encabezados
+  - Listas
+  - Enlaces
+  - Imágenes
+  - Código
+  - Citas
+  - Negritas y cursivas
+
+## JS
+
+- Que es JS
+- Que problema resuelve
+- DOM
+  - Seleccionar elementos
+- Eventos
+  - Click
+  - Mouseover
+  - Mouseout
+  - Keydown
+  - Keyup
+  - Keypress
+  - Change
+  - Submit
+
+## CSS
+
+- Que es CSS
+- Sintaxis básica
+  - Selectores
+  - Propiedades
+  - Valores
+- Flexbox
+  - Centrar elementos
+
+## Python
+
+- Llamadas a APIs con Python
